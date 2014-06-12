@@ -347,8 +347,8 @@ def run():
             connection.subscribe(**{
                 'destination': destination,
                 'version': 1.1,
-                'ack': 'client' if use_explicit_acks else 'auto',
-                'persistent': 'true' if use_persistent_subscription else 'false',
+                'ack': 'client' if use_explicit_acks == '1' else 'auto',
+                'persistent': 'true' if use_persistent_subscription == '1' else 'false',
                 'id': subscription_id,
             })
 
